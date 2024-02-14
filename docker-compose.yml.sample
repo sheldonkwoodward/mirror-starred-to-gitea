@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mirror-to-gitea:
+    image: sheldonkwoodward/mirror-starred-to-gitea:latest
+    build: .
+    container_name: mirror-starred-to-gitea
+    restart: unless-stopped
+    environment:
+      - GITHUB_USERNAME=sheldonkwoodward
+      - GITEA_URL=https://git.home.skw.network
+      - GITEA_TOKEN=<gitea token>
+      - GITHUB_TOKEN=<github token>
+      - GITEA_ORGANIZATION_NAME=mirror
+      - DELAY=3600

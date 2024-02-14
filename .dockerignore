@@ -1,0 +1,11 @@
+.idea/
+.git/
+node_modules/
+
+.secrets.rc
+.gitignore
+
+
+.env
+docker-compose.yml
+docker-compose.yml.sample
